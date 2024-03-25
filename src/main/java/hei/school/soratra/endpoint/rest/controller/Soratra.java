@@ -45,7 +45,8 @@ public class Soratra {
     }
 
     @GetMapping("/soratra/{id}")
-    public  ResponseEntity<?> downloadFile(@PathVariable  int id){
+    public  ResponseEntity<?> downloadFile(@PathVariable  int id)
+    {
         String bucketKey=soratraDirectory+"poem"+id+".txt";
         bucketComponent.download(soratraDirectory+id+".txt");
         return ResponseEntity
